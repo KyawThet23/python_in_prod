@@ -25,6 +25,20 @@
 
 - ပြီးလို့ version check လိုက်ရင် global က python မဟုတ်တော့ဘဲ conda env က python ဖြစ်နေပါပြီ ။
 
-<img src="./pipenv_conda.png" width="300" height="300">
+<img src="./pipenv/pipenv_conda.png" width="300" height="300">
 
 ## **ML လုပ်ရင် conda မှာပဲ lib တွေကို env အလိုက် install ထားမှာဆိုတော့ ဒီလို practice ကို used to ဖြစ်သင့်ပါတယ် ။**
+
+| Tool   | Type | Lock File | Speed | Best Use Case | Notes |
+|--------|------|-----------|-------|---------------|-------|
+| pipenv | All-in-one | Pipfile.lock | Medium | Small–medium projects | Simple but slower; declining popularity |
+| poetry | All-in-one | poetry.lock | Medium–Fast | Libraries & apps | Excellent dependency resolution; modern standard |
+| uv     | Modern pip replacement | uv.lock | Very Fast | Large projects & CI | Rust-based; extremely fast |
+| conda  | Distribution + env | environment.yml | Medium | Data science & ML | Handles binary/CUDA deps very well |
+
+### UV ကတော့ latest and fatest ပဲ
+
+### Docker as python environment
+-  If we said docker, what comes to our minds first is **it works on my machine problem**.
+-  but what we should more concerned about is **containerization**.
+-  If your library need to use Physical layer like GPU, you should thinks container as alternative of env.
